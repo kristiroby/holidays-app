@@ -1,4 +1,12 @@
 class Holiday
+  if(ENV['DATABASE_URL'])
+          uri = URI.parse(ENV['DATABASE_URL'])
+          DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
+      else
+          DB = PG.connect(host: "localhost", port: 5432, dbname: 'holiday_app_development')
+  end
+
+
     # ===============================
     # SET UP
     # ===============================
@@ -6,7 +14,7 @@ class Holiday
     attr_reader :id
 
     # connect to postgres
-    DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'holiday_app_development'})
+    # DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'holiday_app_development'})
 
     # ===============================
     # PREPARED STATEMENTS
