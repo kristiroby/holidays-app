@@ -33,7 +33,7 @@ class Main extends React.Component {
     })
     .then(newHoliday => {
       this.props.handleView('home')
-      // update state with our new post
+      // update state with our new holiday
       this.setState(prevState => {
         prevState.holidays.push(newHoliday)
         return { holidays: prevState.holidays }
@@ -53,11 +53,30 @@ class Main extends React.Component {
     }) .then(updateHoliday => {
     // switch back to the home view
     this.props.handleView('home')
-    // call this.fetchPosts to show the updated post immediately
+    // call this.fetchHolidays to show the updated holiday immediately
     this.fetchHolidays()
   })
     .catch(err => console.log(err))
 }
+
+//delete
+  handleDelete = (id) => {
+    fetch(`/holidays/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(json => {
+        this.setState(prevState => {
+          const holidays = prevState.holidays.filter( holiday => holiday.id !== id)
+          return { holidays }
+        })
+      })
+      .catch(err => console.log(err))
+  }
+
   componentDidMount() {
     this.fetchHolidays()
   }
@@ -66,10 +85,10 @@ class Main extends React.Component {
     <div>
       <div className="holidays-list">
         {this.props.view.page === 'home'
-            ? this.state.holidays.map((holiday, index) =>
+            ? this.state.holidays.map((holiday, id) =>
           <Holiday
-            key={index}
-            holiday={holiday} 
+            key={id}
+            holiday={holiday}
             handleView={this.props.handleView}
             // holidays={this.state.holidays} handleCreate={this.handleCreate}
           />
@@ -78,6 +97,7 @@ class Main extends React.Component {
           <Form
             handleCreate={this.handleCreate}
             handleUpdate={this.handleUpdate}
+            handleDelete={this.handleDelete}
             formInputs={this.props.formInputs}
             view={this.props.view}
           />

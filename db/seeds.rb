@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Post.create({
+  "name" => "New Year's Day",
+  "Description" => "New Year's Day is the first day of the Gregorian calendar, which is widely used in many countries such as the USA."
+  })
