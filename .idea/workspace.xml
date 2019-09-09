@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b0d9f76-632f-4235-85e4-38cf4da2a93a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/Holiday.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Holiday.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/holiday.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/holiday.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +20,15 @@
   </component>
   <component name="ProjectId" id="1QZp1zTZG7PpClGg6r6eFFj2d1S" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -138,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567987761385</updated>
-      <workItem from="1567987763857" duration="764000" />
+      <workItem from="1567987763857" duration="4868000" />
     </task>
     <servers />
   </component>
@@ -155,5 +166,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/javascript/components/Form.js</url>
+          <line>51</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
