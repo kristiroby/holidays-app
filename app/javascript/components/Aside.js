@@ -17,7 +17,10 @@ class Aside extends React.Component {
     render () {
         return (
             <aside>
+<<<<<<< HEAD
                 <nav>
+=======
+>>>>>>> 009152f7be99458878c075fb023a24e826712f6d
                 <ul>
                     <div className="home-add">
                     <li onClick={() => {this.props.handleView('home')}}>Home</li>

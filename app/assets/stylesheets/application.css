@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
 
 @import url("https://fonts.googleapis.com/css?family=Philosopher|Ubuntu&display=swap")
 
@@ -26,22 +27,44 @@ nav {
     text-align: center;
 }
 h1 {
+=======
+ 
+ @import url("https://fonts.googleapis.com/css?family=Philosopher%7CUbuntu&display=swap")
+ :root {
+    --main-font: 'Ubuntu';
+ }
+ body {
+    background-color: #246A73;
+ }
+ nav {
+    text-align: center;
+ }
+ h1 {
+>>>>>>> 009152f7be99458878c075fb023a24e826712f6d
     text-align: center;
     color: #FCF7F8;
     background-color: #E01D2D;
     padding: 20px;
+<<<<<<< HEAD
 }
 
 home-add {
 
 }
 li {
+=======
+ }
+ home-add {
+ }
+ li {
+>>>>>>> 009152f7be99458878c075fb023a24e826712f6d
     display: inline-block;
     padding: 2px 10px;
     margin: 0 2px;
     background-color: #E01D2D;
     color: #FCF7F8;
     border: 1px solid white;
+<<<<<<< HEAD
 
 }
 li:hover {
@@ -50,14 +73,27 @@ li:hover {
 }
 
 .holidays-list {
+=======
+ }
+ li:hover {
+    cursor: pointer;
+ }
+ .holidays-list {
+>>>>>>> 009152f7be99458878c075fb023a24e826712f6d
     padding: 15px;
     background-color: #E8EAED;
     width: 90%;
     display: flex;
     margin: 0 auto;
+<<<<<<< HEAD
 }
 
 .edit-delete {
 
 
 }
+=======
+ }
+ .edit-delete {
+ }
+>>>>>>> 009152f7be99458878c075fb023a24e826712f6d
