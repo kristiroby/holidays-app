@@ -8,21 +8,20 @@ class Main extends React.Component {
     super(props)
     this.state = {
       holidays: [],
-      searchURL: 'https://calendarific.com/api/v2/holidays?api_key=98afab6a63c5dfa88360a097e4dca27d8fc3ba54a2d06a038fa89eb9e75f5a8e&country=US&year=2019'
     }
   }
 
   fetchHolidays = () => {
-    fetch(this.state.searchURL)
+    fetch('/holidays/')
     .then(response => response.json())
     .then(jData => {
       console.log(jData)
-      this.setState({holidays: jData.response.holidays})
+      this.setState({holidays: jData})
     })
   }
   // create new holiday
   handleCreate = (createData) => {
-    fetch('/holidays', {
+    fetch('/holidays/', {
       body: JSON.stringify(createData),
       method: 'POST',
       headers: {
@@ -71,6 +70,7 @@ class Main extends React.Component {
       }
     })
       .then(json => {
+        // this.fetchHolidays()
         this.setState(prevState => {
           const holidays = prevState.holidays.filter( holiday => holiday.id !== id)
           return { holidays }
@@ -80,7 +80,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    this.seedHolidays()
+    this.fetchHolidays()
   }
   render () {
     return (
@@ -89,11 +89,12 @@ class Main extends React.Component {
       <div className="holidays-list">
 
         {this.props.view.page === 'home'
-            ? this.state.holidays.map((holiday, id) =>
+            ? this.state.holidays.map((holiday) =>
           <Holiday
-            key={id}
+            key={holiday.id}
             holiday={holiday}
             handleView={this.props.handleView}
+            handleDelete={this.handleDelete}
             // holidays={this.state.holidays} handleCreate={this.handleCreate}
           />
         )
@@ -101,7 +102,6 @@ class Main extends React.Component {
           <Form
             handleCreate={this.handleCreate}
             handleUpdate={this.handleUpdate}
-            handleDelete={this.handleDelete}
             formInputs={this.props.formInputs}
             view={this.props.view}
           />
