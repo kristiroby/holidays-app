@@ -79,7 +79,7 @@ class Holiday
 
     # # delete
     def self.delete(id)
-      results = DB.exec("DELETE FROM posts WHERE id=#{id};")
+      results = DB.exec("DELETE FROM holidays WHERE id=#{id};")
       return { "deleted" => true }
     end
 
