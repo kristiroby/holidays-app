@@ -14,7 +14,7 @@
 * [Configuration](#configuration)
 * [Database creation](#database-creation)
 * [Database initialization](#database-creation)
-* [How to run the test suite](#how-to-run-the test-suite)
+* [How to run the test suite](#how-to-run-the-test-suite)
 * [Services (job queues, cache servers, search engines, etc.)](#services-(job-queues,-cache-servers,-search-engins,-etc.))
 * [Deployment instructions](#deployment-instructions)
 * [Examples of Use](#examples-of-use)
