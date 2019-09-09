@@ -17,11 +17,14 @@ class Aside extends React.Component {
     render () {
         return (
             <aside>
-                <h1>NAVIGATE</h1>
+                <nav>
                 <ul>
-                    <li onClick={() => {this.props.handleView('home')}}>home</li>
-                    <li onClick={() => {this.props.handleView('addHoliday')}}>add holiday</li>
+                    <div className="home-add">
+                    <li onClick={() => {this.props.handleView('home')}}>Home</li>
+                    <li onClick={() => {this.props.handleView('addHoliday')}}>Add Holiday</li>
+                    </div>
                 </ul>
+                </nav>
             </aside>
         )
     }

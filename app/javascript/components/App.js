@@ -2,6 +2,7 @@
 import React from 'react';
 import Aside from './Aside.js'
 import Main from './Main.js'
+import Header from "./Header";
 
 
 class App extends React.Component {
@@ -57,8 +58,10 @@ class App extends React.Component {
 
   render () {
     return (
-    <div className="holidays-list">
+        <div className="body">
+    <Header/>
       <Aside handleView={this.handleView}/>
+      <div className="holidays-list">
       <Main
         view={this.state.view}
         handleView={this.handleView}
@@ -67,6 +70,7 @@ class App extends React.Component {
       />
 
     </div>
+        </div>
     )
  }
 }

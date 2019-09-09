@@ -65,16 +65,16 @@ class Main extends React.Component {
   render () {
     return (
     <div>
-      <div className="holidays-list">
+      <div className="holidays">
         {this.props.view.page === 'home'
-            ? this.state.holidays.map((holiday, id) =>
+            ? this.state.holidays.map((holiday =>
           <Holiday
             key={holiday.id}
             holiday={holiday} 
             handleView={this.props.handleView}
             // holidays={this.state.holidays} handleCreate={this.handleCreate}
           />
-        )
+        ))
         :
           <Form
             handleCreate={this.handleCreate}
