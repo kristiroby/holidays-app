@@ -10,13 +10,6 @@
 * [Dependencies](#dependencies)
 * [Illustration](#illustration)
 * [Scope of Functionalities](#scope-of-functionalities)
-<!-- may not need all of lines 14-19 -->
-* [Configuration](#configuration)
-* [Database creation](#database-creation)
-* [Database initialization](#database-creation)
-* [How to run the test suite](#how-to-run-the-test-suite)
-* [Services (job queues, cache servers, search engines, etc.)](#services-(job-queues,-cache-servers,-search-engins,-etc.))
-* [Deployment instructions](#deployment-instructions)
 * [Examples of Use](#examples-of-use)
 * [Unsolved Problems](#unsolved-problems)
 * [Project Status](#project-status)
@@ -58,20 +51,6 @@
 * A user can create a holiday, edit/update a holiday, and delete a holiday.
 * When creating and/or updating a holiday, a user can type in the holiday name, description, and/or date.
 * When a user deletes a holiday, the name, description, and date of the holiday are all deleted.
-
-
-### Configuration
-
-### Database creation
-
-### Database initialization
-
-### How to run the test suite
-
-### Services (job queues, cache servers, search engines, etc.)
-
-### Deployment instructions
-
 
 ### Examples of Use
 * A user can browse through the database of holidays.

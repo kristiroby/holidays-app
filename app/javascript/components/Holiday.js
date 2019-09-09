@@ -6,7 +6,7 @@ class Holiday extends React.Component {
     <div className="holiday-info">
         Name: {this.props.holiday.name} <br/>
         Description: {this.props.holiday.description} <br/>
-        Date: {this.props.holiday.date.iso}
+        Date: {this.props.holiday.date}
         <div className="edit-delete">
           <ul>
               <li onClick={() => {this.props.handleView('editHoliday', this.props.holiday)}}>Edit</li>
