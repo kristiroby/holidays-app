@@ -10,7 +10,7 @@ class Holiday extends React.Component {
         <div className="edit-delete">
             <ul>
                 <li onClick={() => {this.props.handleView('editHoliday', this.props.holiday)}}>Edit</li>
-                <li>Delete</li>
+                <li  onClick={() => {this.props.handleDelete(this.props.holidayData.id)}}>Delete</li>
             </ul>
         </div>
     </div>

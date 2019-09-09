@@ -15,11 +15,11 @@
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-6a8943c7a8d23eb04711.js"
+        "/packs/js/application-29b553f33c1ae222177b.js"
       ],
       "js.map": [
         "/packs/js/application-6a8943c7a8d23eb04711.js.map"
->>>>>>> f3299389cc4e5546181aabcca6543ce34c2786d7
+>>>>>>> 8b9f871d150a8333447b1a5d17dc0a2f3371acc8
       ]
     }
   }

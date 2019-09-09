@@ -4,10 +4,10 @@ class Holiday
     # ===============================
     # add attribute readers for instance accesss
     attr_reader :id
-  
+
     # connect to postgres
     DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'holiday_app_development'})
-  
+
     # ===============================
     # PREPARED STATEMENTS
     # ===============================
@@ -19,7 +19,7 @@ class Holiday
         RETURNING id, name, description, date;
       SQL
     )
-  
+
     # update post
     DB.prepare("update_holiday",
       <<-SQL
@@ -29,7 +29,7 @@ class Holiday
         RETURNING id, name, description, date;
       SQL
     )
-  
+
     # ===============================
     # ROUTES
     # ===============================
@@ -45,7 +45,7 @@ class Holiday
         }
       end
     end
-  
+
     # show
     def self.find(id)
       # query to find the posts
@@ -65,7 +65,7 @@ class Holiday
         }, status: 400
       end
     end
-  
+
     # create
     def self.create(opts)
       results = DB.exec_prepared("create_holiday", [opts["name"], opts["description"], opts["date"]])
@@ -76,13 +76,13 @@ class Holiday
         "date" => results.first["date"],
       }
     end
-  
+
     # # delete
-    # def self.delete(id)
-    #   results = DB.exec("DELETE FROM posts WHERE id=#{id};")
-    #   return { "deleted" => true }
-    # end
-  
+    def self.delete(id)
+      results = DB.exec("DELETE FROM posts WHERE id=#{id};")
+      return { "deleted" => true }
+    end
+
     # update
     def self.update(id, opts)
       results = DB.exec_prepared("update_holiday", [id, opts["name"], opts["description"], opts["date"]])
@@ -93,5 +93,5 @@ class Holiday
         "date" => results.first["date"]
       }
     end
-  
+
   end
