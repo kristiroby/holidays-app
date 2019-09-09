@@ -1,6 +1,4 @@
 import React from 'react'
-import Main from './Main.js'
-import App from './App.js'
 
 // =============================
 // COMPONENT CLASS
@@ -23,13 +21,16 @@ class Form extends React.Component {
   }
 
   handleSubmit = (e) => {
-    e.preventDefault()
-    // if the current view is addPost
+      e.preventDefault()
+      // if the current view is addPost
       // create the post
-      this.props.handleCreate(this.state)
-      // update the post
-    //   this.props.handleUpdate(this.state)
-    }
+      if (this.props.view.page === 'addHoliday') {
+          this.props.handleCreate(this.state)
+      } else if (this.props.view.page === 'editHoliday') {
+          // update the post
+          this.props.handleUpdate(this.state)
+      }
+  }
   
   componentDidMount() {
     this.setState({
@@ -42,19 +43,19 @@ class Form extends React.Component {
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="name">
+        <label>
           name
         <input type="text" placeholder="holiday name" id="name" value={this.state.name} onChange={this.handleChange}/>
         </label>
-        <label htmlFor="description">
+        <label>
           description
         <input type="text" placeholder="holiday description" id="description" value={this.state.description} onChange={this.handleChange}/>
         </label>
-        <label htmlFor="name" id="date">
+        <label>
           date
-        <input type="text" placeholder="holiday date" id="date" value={this.state.date} onChange={this.handleChange} />
+        <input type="text" placeholder="YYYY-MM-DD" id="date" value={this.state.date} onChange={this.handleChange} />
         </label>
-        <input type="submit" value="create"/>
+        <input type="submit" value="enter"/>
       </form>
     )
   }
