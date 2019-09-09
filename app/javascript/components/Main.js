@@ -85,9 +85,7 @@ class Main extends React.Component {
   render () {
     return (
     <div>
-      <Aside handleView={this.handleView}/>
       <div className="holidays-list">
-
         {this.props.view.page === 'home'
             ? this.state.holidays.map((holiday) =>
           <Holiday
