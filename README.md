@@ -32,7 +32,7 @@
 * Heroku
 
 ### Dependencies
-* babel/preset-react - version 7.0.0
+<!-- * babel/preset-react - version 7.0.0
 * rails/actioncable - version 6.0.0-alpha
 * rails/activestorage - version 6.0.0-alpha
 * rails/ujs - version 6.0.0-alpha
@@ -41,7 +41,7 @@
 * prop-types - version 15.7.2
 * react - version 16.9.0
 * react-dom - version 16.9.0
-* turbolinks - version 5.2.0
+* turbolinks - version 5.2.0 -->
 
 ### Illustration
 <!-- ![Example holidays-app](./public/images/readme/quickapies_app.png) -->
