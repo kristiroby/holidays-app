@@ -58,6 +58,7 @@ class App extends React.Component {
 
   render () {
     return (
+
         <div className="holidays-list">
           <Aside handleView={this.handleView}
           />

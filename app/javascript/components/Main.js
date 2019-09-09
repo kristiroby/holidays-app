@@ -2,6 +2,7 @@ import React from 'react'
 import Holiday from './Holiday.js'
 import Form from './Form.js'
 import Aside from './Aside.js'
+import Header from "./Header";
 
 class Main extends React.Component {
   constructor(props) {
@@ -85,6 +86,7 @@ class Main extends React.Component {
   render () {
     return (
     <div>
+      <Header/>
       <div className="holidays">
         {this.props.view.page === 'home'
             ? this.state.holidays.map((holiday) =>
@@ -95,7 +97,7 @@ class Main extends React.Component {
             handleDelete={this.handleDelete}
             // holidays={this.state.holidays} handleCreate={this.handleCreate}
           />
-        ))
+        )
         :
           <Form
             handleCreate={this.handleCreate}
