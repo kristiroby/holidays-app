@@ -45,15 +45,14 @@ class Main extends React.Component {
   }
 // edit holiday
   handleUpdate = (updateHoliday) => {
-    console.log(updateHoliday)
-    fetch(`holidays/${updateHoliday.id}`, {
+    fetch(`/holidays/${updateHoliday.id}`,{
       body: JSON.stringify(updateHoliday),
       method: 'PUT',
       headers: {
         'Accept': 'application/json, text/plain',
         'Content-Type': 'application/json'
       }
-    }) .then(updatedHoliday => {
+    }) .then(updateHoliday => {
     // switch back to the home view
     this.props.handleView('home')
     // call this.fetchPosts to show the updated post immediately
@@ -61,7 +60,6 @@ class Main extends React.Component {
   })
     .catch(err => console.log(err))
 }
-
   componentDidMount() {
     this.seedHolidays()
   }
