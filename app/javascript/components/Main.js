@@ -42,15 +42,15 @@ class Main extends React.Component {
     .catch(err => console.log(err))
   }
 // edit holiday
-  handleUpdate = (updateData) => {
-    fetch(`/holidays/${updateData.index}`,{
-      body: JSON.stringify(updateData),
+  handleUpdate = (updateHoliday) => {
+    fetch(`/holidays/${updateHoliday.id}`,{
+      body: JSON.stringify(updateHoliday),
       method: 'PUT',
       headers: {
         'Accept': 'application/json, text/plain',
         'Content-Type': 'application/json'
       }
-    }) .then(updatedHoliday => {
+    }) .then(updateHoliday => {
     // switch back to the home view
     this.props.handleView('home')
     // call this.fetchPosts to show the updated post immediately
@@ -58,7 +58,6 @@ class Main extends React.Component {
   })
     .catch(err => console.log(err))
 }
-
   componentDidMount() {
     this.fetchHolidays()
   }
@@ -67,9 +66,9 @@ class Main extends React.Component {
     <div>
       <div className="holidays-list">
         {this.props.view.page === 'home'
-            ? this.state.holidays.map((holiday, id) =>
+            ? this.state.holidays.map((holiday, index) =>
           <Holiday
-            key={holiday.id}
+            key={index}
             holiday={holiday} 
             handleView={this.props.handleView}
             // holidays={this.state.holidays} handleCreate={this.handleCreate}
