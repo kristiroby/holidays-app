@@ -5,10 +5,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/App.js" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Aside.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Aside.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Holiday.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Holiday.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/packs/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/packs/manifest.json" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/holiday.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/holiday.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+>>>>>>> 1747ee06c0f928dd05e03ada07dbbe4dc1df1f59
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +157,11 @@
       <option name="presentableId" value="Default" />
       <updated>1567987761385</updated>
       <workItem from="1567987763857" duration="4868000" />
+<<<<<<< HEAD
       <workItem from="1568060544980" duration="3526000" />
+=======
+      <workItem from="1568038422675" duration="7965000" />
+>>>>>>> 1747ee06c0f928dd05e03ada07dbbe4dc1df1f59
     </task>
     <servers />
   </component>
@@ -175,9 +185,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/javascript/components/Form.js</url>
           <line>51</line>
           <option name="timeStamp" value="2" />
+=======
+          <url>file://$PROJECT_DIR$/app/javascript/components/Main.js</url>
+          <line>68</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+>>>>>>> 1747ee06c0f928dd05e03ada07dbbe4dc1df1f59
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
