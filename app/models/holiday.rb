@@ -20,15 +20,15 @@ class Holiday
       SQL
     )
   
-    # # update post
-    # DB.prepare("update_post",
-    #   <<-SQL
-    #     UPDATE posts
-    #     SET name = $2, image = $3, body = $4
-    #     WHERE id = $1
-    #     RETURNING id, name, image, body;
-    #   SQL
-    # )
+    # update post
+    DB.prepare("update_holiday",
+      <<-SQL
+        UPDATE holidays
+        SET name = $2, description = $3, date = $4
+        WHERE id = $1
+        RETURNING id, name, description, date;
+      SQL
+    )
   
     # ===============================
     # ROUTES
@@ -83,15 +83,15 @@ class Holiday
     #   return { "deleted" => true }
     # end
   
-    # # update
-    # def self.update(id, opts)
-    #   results = DB.exec_prepared("update_post", [id, opts["name"], opts["image"], opts["body"]])
-    #   return {
-    #     "id" => results.first["id"].to_i,
-    #     "body" => results.first["body"],
-    #     "name" => results.first["name"],
-    #     "image" => results.first["image"]
-    #   }
-    # end
+    # update
+    def self.update(id, opts)
+      results = DB.exec_prepared("update_holiday", [id, opts["name"], opts["description"], opts["date"]])
+      return {
+        "id" => results.first["id"].to_i,
+        "name" => results.first["name"],
+        "description" => results.first["description"],
+        "date" => results.first["date"]
+      }
+    end
   
   end
