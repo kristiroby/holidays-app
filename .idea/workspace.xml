@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b0d9f76-632f-4235-85e4-38cf4da2a93a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/holiday.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/holiday.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,6 +148,7 @@
       <workItem from="1567987763857" duration="4868000" />
       <workItem from="1568038422675" duration="9245000" />
       <workItem from="1568055077696" duration="2027000" />
+      <workItem from="1568059315005" duration="540000" />
     </task>
     <servers />
   </component>
@@ -172,7 +173,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/javascript/components/Main.js</url>
-          <line>102</line>
+          <line>100</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
