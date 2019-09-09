@@ -1,7 +1,6 @@
 
 import React from 'react';
-import Holiday from './Holiday.js'
-import Form from './Form.js'
+import Aside from './Aside.js'
 import Main from './Main.js'
 
 
@@ -13,16 +12,14 @@ class App extends React.Component {
       page: 'home'
     },
     holidays: [],
-    searchURL: 'https://calendarific.com/api/v2/holidays?api_key=98afab6a63c5dfa88360a097e4dca27d8fc3ba54a2d06a038fa89eb9e75f5a8e&country=US&year=2019',
     formInputs: {
-      name: '',
-      description: '',
-      date: '',
+      name: null,
+      description: null,
+      date: null,
       id: null
     }
   }
-  // this.fetchHolidays = this.fetchHolidays.bind(this)
-  // this.handleCreate = this.handleCreate.bind(this)
+
  }
  handleView = (view, holiday) => {
   // declare an empty variable
@@ -36,9 +33,9 @@ class App extends React.Component {
   switch (view) {
     case 'home':
       break
-    case 'addPost':
+    case 'addHoliday':
       break
-    case 'editPost':
+    case 'editHoliday':
       formInputs = {
         name: holiday.name,
         description: holiday.description,
@@ -61,14 +58,16 @@ class App extends React.Component {
   render () {
     return (
     <div className="holidays-list">
+      <Aside handleView={this.handleView}/>
       <Main
         view={this.state.view}
         handleView={this.handleView}
         formInputs={this.state.formInputs}
-        holidays={this.state.holidays} handleCreate={this.handleCreate}
+        holidays={this.state.holidays}
       />
+
     </div>
-  )
-}
+    )
+ }
 }
 export default App
