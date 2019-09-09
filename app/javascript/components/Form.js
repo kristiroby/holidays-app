@@ -52,7 +52,7 @@ class Form extends React.Component {
         </label>
         <label htmlFor="name" id="date">
           date
-        <input type="text" placeholder="holiday date" id="date" value={this.state.date} onChange={this.handleChange} />
+        <input type="text" placeholder="YYYY-MM-DD" id="date" value={this.state.date} onChange={this.handleChange} />
         </label>
         <input type="submit" value="create"/>
       </form>

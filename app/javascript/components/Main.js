@@ -27,19 +27,18 @@ class Main extends React.Component {
       'Content-Type': 'application/json'
     },
   })
-  console.log(createData)
-    // .then(jsonedHoliday => {
-    //   return jsonedHoliday.json()
-    // })
-    // .then(jsonedHoliday => {
+    .then(newHoliday => {
+      return newHoliday.json()
+    })
+    .then(newHoliday => {
       
-    //   // update state with our new post
-    //   this.setState(prevState => {
-    //     this.prevState.holidays.push(jsonedHoliday)
-    //     return { holidays: prevState.holidays }
-    //   })
-    // })
-    // .catch(err => console.log(err))
+      // update state with our new post
+      this.setState(prevState => {
+        prevState.holidays.push(newHoliday)
+        return { holidays: prevState.holidays }
+      })
+    })
+    .catch(err => console.log(err))
 
     
 }
