@@ -4,10 +4,9 @@
     <list default="true" id="2b0d9f76-632f-4235-85e4-38cf4da2a93a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/Holiday.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Holiday.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/holiday.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/holiday.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,6 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567987761385</updated>
       <workItem from="1567987763857" duration="4868000" />
+      <workItem from="1568038422675" duration="7965000" />
     </task>
     <servers />
   </component>
@@ -161,7 +161,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -171,10 +173,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app/javascript/components/Form.js</url>
-          <line>51</line>
+          <url>file://$PROJECT_DIR$/app/javascript/components/Main.js</url>
+          <line>68</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

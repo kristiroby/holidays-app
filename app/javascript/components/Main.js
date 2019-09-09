@@ -1,6 +1,7 @@
 import React from 'react'
 import Holiday from './Holiday.js'
 import Form from './Form.js'
+import Aside from './Aside.js'
 
 class Main extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class Main extends React.Component {
     fetch(this.state.searchURL)
     .then(response => response.json())
     .then(jData => {
+      console.log(jData)
       this.setState({holidays: jData.response.holidays})
     })
   }
@@ -42,9 +44,10 @@ class Main extends React.Component {
     .catch(err => console.log(err))
   }
 // edit holiday
-  handleUpdate = (updateData) => {
-    fetch(`/holidays/${updateData.index}`,{
-      body: JSON.stringify(updateData),
+  handleUpdate = (updateHoliday) => {
+    console.log(updateHoliday)
+    fetch(`holidays/${updateHoliday.id}`, {
+      body: JSON.stringify(updateHoliday),
       method: 'PUT',
       headers: {
         'Accept': 'application/json, text/plain',
@@ -60,16 +63,18 @@ class Main extends React.Component {
 }
 
   componentDidMount() {
-    this.fetchHolidays()
+    this.seedHolidays()
   }
   render () {
     return (
     <div>
+      <Aside handleView={this.handleView}/>
       <div className="holidays-list">
+
         {this.props.view.page === 'home'
-            ? this.state.holidays.map((holiday, id) =>
+            ? this.state.holidays.map((holiday, index) =>
           <Holiday
-            key={holiday.id}
+            key={index}
             holiday={holiday} 
             handleView={this.props.handleView}
             // holidays={this.state.holidays} handleCreate={this.handleCreate}
@@ -82,6 +87,7 @@ class Main extends React.Component {
             formInputs={this.props.formInputs}
             view={this.props.view}
           />
+
         }
       </div>
     </div>
