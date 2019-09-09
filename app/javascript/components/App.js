@@ -13,9 +13,9 @@ class App extends React.Component {
     },
     holidays: [],
     formInputs: {
-      name: null,
-      description: null,
-      date: null,
+      name: "",
+      description: "",
+      date: "",
       id: null
     }
   }
@@ -27,7 +27,7 @@ class App extends React.Component {
     name: '',
     image: '',
     body: '',
-    id: null
+    id: ''
   }
   // decide the pageTitle based on the view
   switch (view) {
@@ -57,17 +57,17 @@ class App extends React.Component {
 
   render () {
     return (
-    <div className="holidays-list">
-      <Aside handleView={this.handleView}/>
-      <Main
-        view={this.state.view}
-        handleView={this.handleView}
-        formInputs={this.state.formInputs}
-        holidays={this.state.holidays}
-      />
-
-    </div>
-    )
- }
-}
+        <div className="holidays-list">
+          <Aside handleView={this.handleView}
+          />
+          <Main
+            view={this.state.view}
+            handleView={this.handleView}
+            formInputs={this.state.formInputs}
+            holidays={this.state.holidays}
+          />
+        </div>
+        )
+    }
+  }
 export default App

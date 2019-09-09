@@ -1,6 +1,7 @@
 import React from 'react'
 import Holiday from './Holiday.js'
 import Form from './Form.js'
+import Aside from './Aside.js'
 
 class Main extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class Main extends React.Component {
     fetch(this.state.searchURL)
     .then(response => response.json())
     .then(jData => {
+      console.log(jData)
       this.setState({holidays: jData.response.holidays})
     })
   }
@@ -59,12 +61,14 @@ class Main extends React.Component {
     .catch(err => console.log(err))
 }
   componentDidMount() {
-    this.fetchHolidays()
+    this.seedHolidays()
   }
   render () {
     return (
     <div>
+      <Aside handleView={this.handleView}/>
       <div className="holidays-list">
+
         {this.props.view.page === 'home'
             ? this.state.holidays.map((holiday, index) =>
           <Holiday
@@ -81,6 +85,7 @@ class Main extends React.Component {
             formInputs={this.props.formInputs}
             view={this.props.view}
           />
+
         }
       </div>
     </div>
