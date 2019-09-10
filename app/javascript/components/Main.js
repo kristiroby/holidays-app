@@ -85,7 +85,7 @@ class Main extends React.Component {
   render () {
     return (
     <div>
-      <div className="holidays-list">
+      <div className="holidays-page">
         {this.props.view.page === 'home'
             ? this.state.holidays.map((holiday) =>
           <Holiday

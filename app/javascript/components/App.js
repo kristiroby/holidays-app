@@ -59,17 +59,19 @@ class App extends React.Component {
   render () {
     return (
       <div>
-      <Header/>
-        <div className="holidays-list">
-          <Aside handleView={this.handleView}
-          />
-          <Main
-            view={this.state.view}
-            handleView={this.handleView}
-            formInputs={this.state.formInputs}
-            holidays={this.state.holidays}
-          />
-        </div>
+        <Header/>
+          <div className="home-add">
+            <Aside handleView={this.handleView}
+            />
+          </div>
+          <div className="holidays-list">
+            <Main
+              view={this.state.view}
+              handleView={this.handleView}
+              formInputs={this.state.formInputs}
+              holidays={this.state.holidays}
+            />
+          </div>
         </div>
 
         )
