@@ -1,17 +1,24 @@
 
  body {
-    background-color: #246A73;
+    background-color: cornflowerblue;
  }
  nav {
     text-align: center;
  }
  h1 {
     text-align: center;
+    width: 90%;
+    margin: 0 auto;
     color: #FCF7F8;
-    background-color: #E01D2D;
+    background-color: #E36397;
+    border: 2px solid black;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 40px;
     padding: 20px;
  }
- home-add {
+
+ .home-add {
+   text-align: center;
  }
  li {
     display: inline-block;
@@ -19,15 +26,21 @@
     margin: 0 2px;
     background-color: #E01D2D;
     color: #FCF7F8;
-    border: 1px solid white;
+    border: 2px solid black;
+
  }
  li:hover {
     cursor: pointer;
  }
  .holidays-list {
+   font-family: 'Fjalla One', sans-serif;
+   display: flex;
+   flex-direction: column;
     padding: 15px;
     background-color: #E8EAED;
     width: 90%;
     display: flex;
     margin: 0 auto;
+    border: 2px solid black;
+
  }
