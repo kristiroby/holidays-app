@@ -54,21 +54,18 @@
 
 ### Examples of Use
 * A user can browse through the database of holidays.
-<!-- ![Example add_search](./public/images/readme/anyone_search.png) -->
-
 * A user can create a holiday, edit/update a holiday, and delete a holiday.
-
 * When creating and/or updating a holiday, a user can type in the holiday name, description, and/or date.
-
 * When a user deletes a holiday, the name, description, and date of the holiday are all deleted.
-
 
 ### Unsolved Problems
 * We tried to use a calendar api, but we could not get the id properties to cooperate.
 * We ran out of time for adding a "Create A User", "Login", "Log-Out" system.
 
 ### Project Status
-
+* Currently, we have a full CRUD working app.
+* We'd like to solve our problems above.
+* Improve our CSS.
 
 
 ### Live Link to Site
@@ -76,6 +73,9 @@ https://shrouded-earth-87450.herokuapp.com/
 
 
 ### References
+* GA SEI Notes
+* BULLDOGJOB: https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
+
 
 
 
