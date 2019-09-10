@@ -31,26 +31,3 @@
     display: flex;
     margin: 0 auto;
  }
- .edit-delete {
- }
-            <input
-              id='holidayMonth'
-              type='text'
-              placeholder='Holiday Month'
-              value={this.state.holidayMonth}
-              onChange={this.handleChange}
-            />
-            <input
-              type='submit'
-              value='Find Holiday Info'
-            />
-          </form>
-          {(this.state.holidays)
-            ? <CalendarInfo holidays={this.state.holidays} />
-            : ''
-          }
-        </React.Fragment>
-      )
-    }
-}
-export default App
